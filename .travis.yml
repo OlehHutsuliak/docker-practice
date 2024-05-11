@@ -7,4 +7,4 @@ before_install:
   - docker build -t olehhutsuliak/docker-practice -f Dockerfile.dev .
 
 script:
-  - docker run olehhutsuliak/docker-practice npm run test -- --coverage
+  - docker run -e CI=true olehhutsuliak/docker-practice npm run test
